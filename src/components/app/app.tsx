@@ -32,14 +32,21 @@ const App = () => {
     dispatch(getIngredients());
     dispatch(getFeeds());
     if (isAuth) dispatch(getUserInfo());
-  }, []);
+  }, [isAuth]);
 
   return (
     <>
       <div className={styles.app}>
         <AppHeader />
         <Routes location={background || location}>
-          <Route path='/' element={<ConstructorPage />} />
+          <Route
+            path='/'
+            element={
+              <ProtectedRoute>
+                <ConstructorPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path='/feed' element={<Feed />} />
           <Route
             path='/login'

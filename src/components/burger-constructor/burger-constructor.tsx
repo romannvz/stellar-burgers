@@ -33,14 +33,20 @@ export const BurgerConstructor: FC = () => {
   const orderModalData = useSelector(lastOrder);
 
   const onOrderClick = () => {
-    if (!constructorItems.bun || orderRequest)
-      if (isAuth) return alert('Обязательно выберите булку!');
-      else return navigate('/login');
+    if (!isAuth) return navigate('/login');
     else {
-      const orderArray: string[] = [];
-      orderArray.push(constructorItems.bun._id);
-      constructorItems.ingredients.forEach((item) => orderArray.push(item._id));
-      dispatch(postOrder(orderArray)).then(() => dispatch(clearConstructor()));
+      if (!constructorItems.bun || orderRequest)
+        return alert('Обязательно выберите булку!');
+      else {
+        const orderArray: string[] = [];
+        orderArray.push(constructorItems.bun._id);
+        constructorItems.ingredients.forEach((item) =>
+          orderArray.push(item._id)
+        );
+        dispatch(postOrder(orderArray)).then(() =>
+          dispatch(clearConstructor())
+        );
+      }
     }
   };
 
