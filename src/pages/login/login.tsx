@@ -17,8 +17,6 @@ export const Login: FC = () => {
     dispatch(loginThunk({ email, password }));
   };
 
-  if (isAuth) navigate('/profile');
-
   return (
     <LoginUI
       errorText=''
