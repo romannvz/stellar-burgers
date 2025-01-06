@@ -16,7 +16,7 @@ import { ProtectedRoute } from '../ProtectedRoute/protected-route';
 import { useNavigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AppDispatch } from '../../services/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getIngredients } from '../../slices/ingredientsSlice';
 import { getFeeds } from '../../slices/feedsSlice';
 import { getUserInfo, userAuthSelector } from '../../slices/userSlice';
@@ -26,13 +26,15 @@ const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const background = location.state?.background;
+  const [init, setInit] = useState<boolean>(false);
   const isAuth = useSelector(userAuthSelector);
 
   useEffect(() => {
     dispatch(getIngredients());
     dispatch(getFeeds());
     if (isAuth) dispatch(getUserInfo());
-  }, [isAuth]);
+    setInit(true);
+  }, [init]);
 
   return (
     <>

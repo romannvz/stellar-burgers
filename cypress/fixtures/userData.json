@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Njk3Y2EzNzUwODY0MDAxZDM3M2M4YiIsImlhdCI6MTczNjE2NjU4OCwiZXhwIjoxNzM2MTY3Nzg4fQ.5WrSencDzGQSQcEMUSyzs9DhwHsvzVXKLYyybgiu-xQ",
+    "refreshToken": "b51607b68ba9918bd500cbfc586692627bad315b940ceaf4398c6ea7ac222c307a6e35a266b7c5d2",
+    "user": {
+        "email": "romannvz@ya.ru",
+        "name": "R V"
+    }
+}
