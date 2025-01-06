@@ -35,11 +35,10 @@ const ingredientsSlice = createSlice({
         (item) => item._id === action.payload._id
       );
       if (pushingItem)
-        state.constructorItems.push(
-          Object.assign(pushingItem, {
-            id: action.payload._id + Math.random().toString()
-          })
-        );
+        state.constructorItems.push({
+          ...pushingItem,
+          id: action.payload._id + Math.random().toString()
+        });
     },
     popIngredient(state, action: PayloadAction<TConstructorIngredient['id']>) {
       state.constructorItems = state.constructorItems.filter(

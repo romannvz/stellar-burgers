@@ -26,7 +26,7 @@ interface userState {
 const initialState: userState = {
   user: { email: '', name: '' },
   isLoading: false,
-  isAuth: localStorage.getItem('refreshToken') ? true : false,
+  isAuth: false,
   error: null,
   orders: [],
   sendingOrder: false,
@@ -199,6 +199,7 @@ const userSlice = createSlice({
       .addCase(logoutThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
+        state.isAuth = true;
       })
       .addCase(logoutThunk.fulfilled, (state, action) => {
         state.isLoading = false;

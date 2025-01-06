@@ -1,0 +1,73 @@
+{
+    "success": true,
+    "orders": [
+        {
+            "_id": "6779540d750864001d376fcd",
+            "ingredients": [
+                "643d69a5c3f7b9001cfa093d",
+                "643d69a5c3f7b9001cfa0948",
+                "643d69a5c3f7b9001cfa0941",
+                "643d69a5c3f7b9001cfa0943"
+            ],
+            "status": "done",
+            "name": "Альфа-сахаридный space флюоресцентный био-марсианский бургер",
+            "createdAt": "2025-01-04T15:30:21.803Z",
+            "updatedAt": "2025-01-04T15:30:22.824Z",
+            "number": 64656
+        },
+        {
+            "_id": "6779534a750864001d376fcb",
+            "ingredients": [
+                "643d69a5c3f7b9001cfa0943",
+                "643d69a5c3f7b9001cfa0942"
+            ],
+            "status": "done",
+            "name": "Space spicy бургер",
+            "createdAt": "2025-01-04T15:27:06.976Z",
+            "updatedAt": "2025-01-04T15:27:08.038Z",
+            "number": 64655
+        },
+        {
+            "_id": "677952e8750864001d376fc8",
+            "ingredients": [
+                "643d69a5c3f7b9001cfa093d",
+                "643d69a5c3f7b9001cfa0940",
+                "643d69a5c3f7b9001cfa093f",
+                "643d69a5c3f7b9001cfa0942"
+            ],
+            "status": "done",
+            "name": "Метеоритный флюоресцентный spicy бессмертный бургер",
+            "createdAt": "2025-01-04T15:25:28.538Z",
+            "updatedAt": "2025-01-04T15:25:29.430Z",
+            "number": 64654
+        },
+        {
+            "_id": "677949c6750864001d376fb2",
+            "ingredients": [
+                "643d69a5c3f7b9001cfa093d",
+                "643d69a5c3f7b9001cfa0943",
+                "643d69a5c3f7b9001cfa0942"
+            ],
+            "status": "done",
+            "name": "Space флюоресцентный spicy бургер",
+            "createdAt": "2025-01-04T14:46:30.125Z",
+            "updatedAt": "2025-01-04T14:46:31.001Z",
+            "number": 64653
+        },
+        {
+            "_id": "6779483b750864001d376fae",
+            "ingredients": [
+                "643d69a5c3f7b9001cfa093c",
+                "643d69a5c3f7b9001cfa0943",
+                "643d69a5c3f7b9001cfa0943"
+            ],
+            "status": "done",
+            "name": "Краторный space бургер",
+            "createdAt": "2025-01-04T14:39:55.164Z",
+            "updatedAt": "2025-01-04T14:39:56.153Z",
+            "number": 64652
+        }
+    ],
+    "total": 98765,
+    "totalToday": 43210
+}

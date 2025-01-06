@@ -5,6 +5,7 @@ import { BurgerIngredientsUI } from '../ui/burger-ingredients';
 import { useSelector } from '../../services/store';
 import {
   bunsSelector,
+  ingredientsSelector,
   mainsSelector,
   saucesSelector
 } from '../../slices/ingredientsSlice';
@@ -14,6 +15,7 @@ export const BurgerIngredients: FC = () => {
   const buns = useSelector(bunsSelector);
   const mains = useSelector(mainsSelector);
   const sauces = useSelector(saucesSelector);
+  console.log(useSelector(ingredientsSelector));
 
   const [currentTab, setCurrentTab] = useState<TTabMode>('bun');
   const titleBunRef = useRef<HTMLHeadingElement>(null);
